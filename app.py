@@ -3,9 +3,11 @@ from calculator import add, subtract, multiply, divide
 
 app = Flask(__name__)
 
+
 @app.route('/')
 def home():
     return "Calculator API is running!"
+
 
 @app.route('/calculate', methods=['POST'])
 def calculate():
@@ -29,6 +31,7 @@ def calculate():
         return jsonify({'error': 'Invalid operation'}), 400
 
     return jsonify({'result': result})
+
 
 if __name__ == '__main__':
     app.run(debug=True)
