@@ -67,3 +67,4 @@ def test_api_invalid_operation(client):
         json={'a': 5, 'b': 2, 'operation': 'power'}
     )
     assert response.status_code == 400
+    
